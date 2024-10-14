@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <style>
+        /* Estilos para o header */
+        .top-header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .top-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .top-header p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+        }
+
+        /* Estilos para o conteúdo */
+        .content {
+            margin-top: 80px; /* Para evitar sobreposição com o header */
+            padding: 20px;
+        }
+
+        /* Estilos da sidebar */
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            background-color: #333;
+            padding-top: 100px; /* Aumentei o padding-top para ajustar a posição */
+            text-align: center;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        /* Estilos para a foto de perfil */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid white;
+        }
+
+        /* Estilos principais */
+        .section {
+            padding: 20px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            text-align: center;
+        }
+
+        .portfolio-item {
+            margin-bottom: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="top-header">
+        <h1>Portfólio Pessoal</h1>
+        <p>Última atualização: <span id="data-atualizacao"></span></p>
+    </div>
+
+    <!-- Sidebar com a foto de perfil -->
+    <nav class="sidebar">
+        <img src="/img/perfil.jpg" alt="Foto de Perfil" class="profile-pic">
+        <a href="#biografia">Biografia</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="content">
+        <section id="biografia" class="section">
+            <h2>Biografia</h2>
+            <p>Olá! Eu sou [Seu Nome], um estudante de [Sua Área de Estudo] apaixonado por [Suas Paixões]. Ao longo dos
+                anos, tenho trabalhado em diversos projetos que me permitiram aplicar e expandir meus conhecimentos em
+                [Suas Especialidades]. Meu objetivo é continuar aprendendo e me desenvolvendo para contribuir cada vez mais
+                para o crescimento de [Sua Indústria ou Comunidade].</p>
+        </section>
+
+        <section id="portfolio" class="section">
+            <h2>Portfólio de Projetos</h2>
+
+            <div class="portfolio-item">
+                <h3>Projeto 1</h3>
+                <p>Descrição breve do projeto. Explique o que você fez e as tecnologias que utilizou.</p>
+            </div>
+
+            <div class="portfolio-item">
+                <h3>Projeto 2</h3>
+                <p>Descrição breve do projeto. Explique o que você fez e as tecnologias que utilizou.</p>
+            </div>
+
+            <div class="portfolio-item">
+                <h3>Projeto 3</h3>
+                <p>Descrição breve do projeto. Explique o que você fez e as tecnologias que utilizou.</p>
+            </div>
+        </section>
+
+        <section id="contato" class="section">
+            <h2>Contato</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Fernando Cesar Graciano. Todos os direitos reservados.</p>
+        </footer>
+    </main>
+
+    <!-- Script para atualizar a data -->
+    <script>
+        // Script para definir a data de última atualização
+        const dataAtualizacao = new Date(document.lastModified).toLocaleDateString('pt-BR', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        });
+        document.getElementById('data-atualizacao').textContent = dataAtualizacao;
+    </script>
+
+</body>
+
+</html>
