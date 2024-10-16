@@ -1,0 +1,62 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+/* Estilos para o cabeçalho */
+header {
+    background: url('../img/slide2.jpg') no-repeat center center/cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: rgb(25, 91, 78)
+}
+header p {
+    font-size: 1.5rem;
+    /* color: rgb(25, 91, 78) */
+    color: #ff0;
+    font-weight: bold;
+}
+
+/* Estilos gerais */
+.container {
+    margin-top: 30px;
+}
+
+/* Estilos da seção de menu */
+.menu-item {
+    padding: 15px;
+    transition: transform 0.3s;
+}
+.menu-item:hover {
+    transform: scale(1.05);
+}
+.menu-item img {
+    object-fit: cover;
+}
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 1rem;
+}
+
+/* Estilos do formulário de contato */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #333;
+    color: white;
+}

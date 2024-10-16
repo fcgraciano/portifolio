@@ -82,8 +82,51 @@
             text-align: center;
         }
 
-        .portfolio-item {
-            margin-bottom: 20px;
+        /* Estilos dos cards do portfólio */
+        .portfolio-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
+            justify-content: space-between;
+        }
+
+        .portfolio-card {
+            background-color: #f9f9f9;
+            width: 280px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-card p {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-card a {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .portfolio-card a:hover {
+            background-color: #555;
         }
 
         input,
@@ -127,7 +170,7 @@
 
     <!-- Sidebar com a foto de perfil -->
     <nav class="sidebar">
-        <img src="/img/perfil.jpg" alt="Foto de Perfil" class="profile-pic">
+        <img src="sua-imagem.jpg" alt="Foto de Perfil" class="profile-pic">
         <a href="#biografia">Biografia</a>
         <a href="#portfolio">Portfólio</a>
         <a href="#contato">Contato</a>
@@ -145,20 +188,30 @@
 
         <section id="portfolio" class="section">
             <h2>Portfólio de Projetos</h2>
+            
+            <!-- Grid de cards do portfólio -->
+            <div class="portfolio-grid">
+                <!-- Card do projeto 1 -->
+                <div class="portfolio-card">
+                    <h3>Projeto 1</h3>
+                    <p>Um sistema web desenvolvido para gerenciamento de vendas utilizando tecnologias como HTML, CSS e
+                        JavaScript.</p>
+                    <a href="projeto1.html">Saiba mais</a>
+                </div>
 
-            <div class="portfolio-item">
-                <h3>Projeto 1</h3>
-                <p>Descrição breve do projeto. Explique o que você fez e as tecnologias que utilizou.</p>
-            </div>
+                <!-- Card do projeto 2 -->
+                <div class="portfolio-card">
+                    <h3>Projeto 2</h3>
+                    <p>Uma aplicação mobile desenvolvida com React Native para gestão de tarefas e produtividade.</p>
+                    <a href="projeto2.html">Saiba mais</a>
+                </div>
 
-            <div class="portfolio-item">
-                <h3>Projeto 2</h3>
-                <p>Descrição breve do projeto. Explique o que você fez e as tecnologias que utilizou.</p>
-            </div>
-
-            <div class="portfolio-item">
-                <h3>Projeto 3</h3>
-                <p>Descrição breve do projeto. Explique o que você fez e as tecnologias que utilizou.</p>
+                <!-- Card do projeto 3 -->
+                <div class="portfolio-card">
+                    <h3>Projeto 3</h3>
+                    <p>Uma plataforma de e-commerce construída com Node.js e Express, integrando pagamento e envio.</p>
+                    <a href="projeto3.html">Saiba mais</a>
+                </div>
             </div>
         </section>
 
